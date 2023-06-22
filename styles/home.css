@@ -1,0 +1,792 @@
+.header-right .home {
+    color: #00b0ff;
+}
+/* main start */
+/** section one start **/
+.carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    grid-template-areas: 
+        "carousel-item1 carousel-item1"
+        "carousel-item2 carousel-item5";
+    margin: 5px 0 20px;
+}
+.carousel-item1 {
+    grid-area: carousel-item1;
+}
+.carousel-item2 {
+    grid-area: carousel-item2;
+}
+.carousel-item3 {
+    grid-area: carousel-item3;
+    display: none;
+}
+.carousel-item4 {
+    grid-area: carousel-item4;
+    display: none;
+}
+.carousel-item5 {
+    grid-area: carousel-item5;
+}
+.carousel-item6 {
+    grid-area: carousel-item6;
+    display: none;
+}
+.carousel-item7 {
+    grid-area: carousel-item7;
+    display: none;
+}
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel a {
+    position: relative;
+}
+.carousel .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 60%,rgba(0, 0, 0));
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+}
+.carousel-item:hover .overlay {
+    opacity: 1;
+}
+.carousel .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: end;
+    gap: 13px;
+    padding: 16px;
+    font-size: 13px;
+}
+.carousel-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+.carousel-item1 .carousel-title {
+    font-size: 24px;
+}
+.overlay-text p:first-child span::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transform: rotate(45deg);
+    margin: 2px;
+}
+.overlay-text p:last-child span::before, .main-post .date::before, .latest-news-posts .date:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 8px;
+    background-color: #dedede;
+    margin: 0 8px;
+}
+.nav-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 50px 0;
+    gap: 30px;
+}
+.nav-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    font-size: 22px;
+    gap: 10px;
+    cursor: pointer;
+}
+.nav-icon {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    background-color: #00b0ff;
+    border-radius: 50%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s linear;
+}
+.nav-icon i {
+    font-size: 30px;
+}
+.section-one .nav-icon-box:hover .nav-icon {
+    transform: scale(1.1);
+}
+/** section one end **/
+
+/** section two start**/
+.section-two {
+    display: flex;
+    flex-direction: column;
+}
+.side-posts, .fashion-posts {
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+.post {
+    padding: 16px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.side-posts .post:nth-child(-n+4), .fashion-posts .post:nth-child(-n+5) {
+    border-bottom: 1px solid #dedede;
+}
+.post-image {
+    height: 80px;
+    aspect-ratio: 3/2;
+    position: relative;
+}
+.post-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* aspect-ratio: 3/2; */
+    object-fit: cover;
+}
+.fashion-trend {
+    padding: 0 30px;
+}
+.fashion-trend .main-post {
+    padding-bottom: 30px;
+}
+.main-title, .main-post .post-title {
+    font-size: 27px;
+    padding: 25px 0;
+}
+.main-post .post-title {
+    display: block;
+    line-height: 1.4;
+    padding-bottom: 10px;
+}
+.main-post .post-image {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 66.67%;
+}
+.post-text a {
+    color: #313131;
+    transition: all 0.2s ease-in-out;
+}
+.main-post .post-title + p, .main-post .date {
+    color: #888;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.main-post-text {
+    line-height: 1.8;
+}
+.main-post .date::before {
+    background-color: #888;
+}
+.fashion-posts .post-title {
+    font-size: 17px;
+}
+.fashion-posts .date {
+    font-size: 15px;
+}
+/** section two end **/
+
+/** section three start**/
+.section-three {
+    display: grid;
+    gap: 30px;
+    padding: 30px;
+    background-color: #f5f5f5;
+}
+.video {
+    display: grid;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} 
+.playlist {
+    color: #ffffff;
+    background-color: black;
+}
+.playlist-header {
+    display: flex;
+    align-items: center;
+    background-color: #00b0ff;
+}
+.playlist-icon {
+    font-size: 27px;
+    padding: 16px;
+}
+.playlist-title a {
+    font-size: 20px;
+    font-weight: bold;
+}
+.video-numbers, .video-duration {
+    font-size: 12px;
+}
+.playlist-videos {
+    overflow-y: scroll;
+    height: 186px;
+}
+.playlist-videos a {
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 10px;
+    background-color: black;
+    border: 1px solid #212121;
+    padding: 10px;
+    transition: all 0.2s linear;
+}
+.playlist-videos a:hover {
+    background-color: #212121;
+}
+.playlist-number {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-title {
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.lifestyle-sidebar {
+    padding: 30px;
+    border-top: 3px solid #00b0ff;
+    background-color: white;
+}
+.lifestyle-sidebar .nav-icon-box {
+    align-items: flex-start;
+}
+.lifestyle-sidebar .nav-icon {
+    width: 84px;
+    height: 84px;
+}
+.lifestyle-sidebar .nav-icon:hover {
+    color: #888;
+}
+.post-entry {
+    padding: 20px 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.lifestyle-sidebar .button {
+    display: inline-block;
+    background-color: #00b0ff;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+}
+.lifestyle-sidebar .button:hover {
+    background-color: rgba(0, 176, 255, 0.7);
+}
+/** section three end**/
+/** section four start**/
+    .section-four {
+        padding: 30px;
+    }
+    .about-content {
+        padding: 30px 0;
+    }
+    .heading {
+        padding: 18px 0;
+        font-size: 18px;
+        font-weight: 700;
+        position: relative;
+    }
+    .heading::after {
+        content: '';
+        background-color: #00b0ff;
+        height: 2px;
+        width: 60px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    .celeb-posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 30px 0;
+    } 
+    .celeb-posts .post1, .fitness-posts .post1 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .post1-image, .travel-posts .travel-post-image {
+        display: inline-block;
+        width: 100%;
+        aspect-ratio: 3/2;
+        background-size: cover;
+    }
+    .celeb-posts .post1:nth-child(1) .post1-image {
+        background-image: url('../images/celeb/image1.jpg');
+    }
+    .celeb-posts .post1:nth-child(2) .post1-image {
+        background-image: url('../images/celeb/image2.jpg');
+    }
+    .celeb-posts .post1:nth-child(3) .post1-image {
+        background-image: url('../images/celeb/image3.jpg');
+    }
+    .celeb-posts .post1:nth-child(4) .post1-image {
+        background-image: url('../images/celeb/image4.jpg');
+    }
+    .celeb-posts .post1:nth-child(5) .post1-image {
+        background-image: url('../images/celeb/image5.jpg');
+    }
+    .celeb-posts .post1:nth-child(6) .post1-image {
+        background-image: url('../images/celeb/image6.jpg');
+    }
+    .celeb-posts .post1:nth-child(7) .post1-image {
+        background-image: url('../images/celeb/image7.jpg');
+    }
+    .celeb-posts .post1:nth-child(8) .post1-image {
+        background-image: url('../images/celeb/image8.jpg');
+    }
+    .celeb-posts .post1-title {
+        font-size: 13px;
+    }
+    .newsletter .post-entry {
+        text-align: center;
+    }
+    .newsletter input {
+        display: block;
+        width: 100%;
+        border: 1px solid #dedede;
+        padding: 14px;
+        margin-bottom: 14px;
+        font-size: 12px;
+        color: #888;
+    }
+    .newsletter input:last-child {
+        background-color: #212121;
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    .newsletter input:last-child:hover {
+        background-color: #00b0ff;
+    }
+    .travel-posts {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .travel-post {
+        display: flex;
+        position: relative;
+        background: black;
+    }
+    .travel-post-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: white;
+        font-weight: bold;
+        padding: 20px;
+    }
+    .travel-post-image:hover {
+        opacity: 0.5;
+    }
+    .travel-post-image {
+        transition: all 0.2s ease-in-out;
+    }
+    .travel-post:nth-child(1) .travel-post-image {
+        background-image: url('../images/travel/image1.jpg');
+    }
+    .travel-post:nth-child(2) .travel-post-image {
+        background-image: url('../images/travel/image2.jpg');
+    }
+    .travel-post:nth-child(3) .travel-post-image{
+        background-image: url('../images/travel/image3.jpg');
+    }
+    .travel-post:nth-child(4) .travel-post-image {
+        background-image: url('../images/travel/image4.jpg');
+    }
+    .travel-post:nth-child(5) .travel-post-image {
+        background-image: url('../images/travel/image5.jpg');
+    }
+    .travel-post:nth-child(6) .travel-post-image {
+        background-image: url('../images/travel/image6.jpg');
+    }
+    .travel-post:nth-child(7) .travel-post-image {
+        background-image: url('../images/travel/image7.jpg');
+    }
+    .travel-post:nth-child(8) .travel-post-image {
+        background-image: url('../images/travel/image8.jpg');
+    }
+    .fitness-posts, .latest-news-posts {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .fitness-posts .post1:nth-child(1) .post1-image {
+        background-image: url('../images/fitness/image1.jpg');
+    }
+    .fitness-posts .post1:nth-child(2) .post1-image {
+        background-image: url('../images/fitness/image2.jpg');
+    }
+    .fitness-posts .post1:nth-child(3) .post1-image {
+        background-image: url('../images/fitness/image3.jpg');
+    }
+    .fitness-posts .post1:nth-child(4) .post1-image {
+        background-image: url('../images/fitness/image4.jpg');
+    }
+    .fitness-posts .post1:nth-child(5) .post1-image {
+        background-image: url('../images/fitness/image5.jpg');
+    }
+    .fitness-posts .post1:nth-child(6) .post1-image {
+        background-image: url('../images/fitness/image6.jpg');
+    }
+    .fitness-posts .post1-title, .entertainment-posts .post1-title, .latest-news-posts .post1-title {
+        font-size: 18px;
+    }
+    .fitness-posts .post1-title:hover, .entertainment-posts .post1-title:hover, .latest-news-posts .post1-title:hover {
+        color: #888;
+    }
+    .entertainment-posts .post1, .latest-news-posts .post1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .entertainment-posts .post1 {
+        padding-bottom: 30px;
+    }
+    .editors-posts .post1:first-child {
+        padding: 30px 0;
+    }
+    .entertainment-posts .post1:nth-last-child(-n+4), .editors-posts .post1:nth-last-child(-n+7) {
+        border-top: 1px solid #dedede;
+        padding: 30px 0;
+    }
+    .entertainment-posts .post1:nth-child(1) .post1-image {
+        background-image: url('../images/entertainment/image1.jpg');
+    }
+    .entertainment-posts .post1:nth-child(2) .post1-image {
+        background-image: url('../images/entertainment/image2.jpg');
+    }
+    .entertainment-posts .post1:nth-child(3) .post1-image {
+        background-image: url('../images/entertainment/image3.jpg');
+    }
+    .entertainment-posts .post1:nth-child(4) .post1-image {
+        background-image: url('../images/entertainment/image4.jpg');
+    }
+    .entertainment-posts .post1:nth-child(5) .post1-image {
+        background-image: url('../images/entertainment/image5.jpg');
+    }
+    .post1-pretitle {
+        color: #00b0ff;
+        font-size: 12px;
+    }
+    .entertainment-posts .post1-text, .latest-news-posts .post1-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .entertainment-posts .post-entry, .entertainment-posts .date, .latest-news-posts .post-entry {
+        padding: unset;
+    }
+    .latest-news-posts .post1:nth-child(1) .post1-image {
+        background-image: url('../images/travel/image1.jpg');
+    }
+    .latest-news-posts .post1:nth-child(2) .post1-image {
+        background-image: url('../images/fashion/image1.jpg');
+    }
+    .latest-news-posts .post1:nth-child(3) .post1-image {
+        background-image: url('../images/fitness/image1.jpg');
+    }
+    .latest-news-posts .post1:nth-child(4) .post1-image {
+        background-image: url('../images/entertainment/image1.jpg');
+    }
+    .latest-news-posts .post1:nth-child(5) .post1-image {
+        background-image: url('../images/celeb/image1.jpg');
+    }
+    .latest-news-posts .post1:nth-child(6) .post1-image {
+        background-image: url('../images/Technology/image1.jpg');
+    }
+    .page-numbers {
+        padding: 30px 0;
+        display: flex;
+        gap: 10px;
+    }
+    .page-number {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        color: #888;
+        font-size: 14px;
+        border: 1px solid #dedede;
+    }
+    .page-number:first-child {
+        color: white;
+        background-color: #00b0ff;
+    }
+    .page-number:nth-child(2):hover, .page-number:nth-child(3):hover, .page-number:nth-child(5):hover, .page-number:nth-child(6):hover {
+        color: #313131;
+        border-color: #313131;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    .sidebar-right .social a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid #dedede;
+        display: grid;
+        place-items: center;
+        color: #313131;
+        font-size: 14px;
+    }
+    .sidebar-right .social a:hover {
+        background-color: #00b0ff;
+        color: white;
+    }
+    .sidebar-right .social {
+        padding: 20px 0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .social-wrapper {
+        display: grid;
+        place-content: start;
+    }
+    .editors-posts .post1:nth-child(1) .post1-image {
+        background-image: url('../images/travel/image8.jpg');
+    }
+    .editors-posts .post1:nth-child(2) .post1-image {
+        background-image: url('../images/coruasel/image2.jpg');
+    }
+    .editors-posts .post1:nth-child(3) .post1-image {
+        background-image: url('../images/coruasel/image5.jpg');
+    }
+    .editors-posts .post1:nth-child(4) .post1-image {
+        background-image: url('../images/coruasel/image3.jpg');
+    }
+    .editors-posts .post1:nth-child(5) .post1-image {
+        background-image: url('../images/coruasel/image6.jpg');
+    }
+    .editors-posts .post1:nth-child(6) .post1-image {
+        background-image: url('../images/coruasel/image4.jpg');
+    }
+    .editors-posts .post1:nth-child(7) .post1-image {
+        background-image: url('../images/coruasel/image7.jpg');
+    }
+    .editors-posts .post1:nth-child(8) .post1-image {
+        background-image: url('../images/fashion/image8.jpg');
+    }
+    .editors-posts {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .editors-posts .post1 {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 10px;
+    }
+    .banner {
+        background-image: url('../images/banner/image1.jpg');
+        width: 100%;
+        aspect-ratio: 3/2;
+        background-size: cover;
+    }
+    .categories {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .category {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    .category:nth-child(n+2)  {
+        border-top: 1px solid #dedede;
+    }
+    .category:nth-last-child(-n+3) {
+        padding-left: 20px;
+    } 
+    .category p:hover {
+        cursor: pointer;
+    }
+    .category a:hover {
+        color: #00b0ff;
+    }
+    .category a {
+        transition: all 0.3s ease-in-out;
+    }
+/** section four end**/
+
+/* main end */
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .nav-icons, .section-two {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .side-posts {
+        width: 27%;
+    }
+    .post {
+        flex-direction: column;
+    }
+    .fashion-trend {
+        width: 73%;
+    }
+    .carousel {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            "carousel-item1 carousel-item2"
+            "carousel-item1 carousel-item5";
+    }
+    .fashion-posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: unset;
+        padding: 0;
+        justify-content: space-between;
+    }
+    .fashion-posts .post-title {
+        font-size: 19px;
+    }
+    .fashion-posts .date {
+        font-size: 17px;
+    }
+    .fashion-posts .post:nth-child(-n+5) {
+        border-bottom: none;
+    }
+    .section-three {
+        grid-template-columns: 2fr 1fr;
+    }
+    .travel-posts, .fitness-posts, .entertainment-posts .post1, .latest-news-posts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .carousel {
+        grid-template-columns: 2fr repeat(2, 1fr);
+        grid-template-areas: 
+            "carousel-item1 carousel-item2 carousel-item3"
+            "carousel-item1 carousel-item5 carousel-item6";
+    }
+    .carousel-item3, .carousel-item6 {
+        display: block;
+    }
+    .fashion-posts .post {
+        flex-direction: row;
+        align-items: center;
+    }
+    .section-three {
+        grid-template-columns: 3fr 1fr;
+    }
+    .video {
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+    }
+    .main-video {
+        position: relative;
+    }
+    .playlist {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        bottom: 0;
+        width: 52%;
+    }
+    .section-four {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 50px;
+    }
+    .fitness-posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .fitness-posts .post1-title {
+        font-size: 14px;
+    }
+    .social-wrapper {
+        place-content: center;
+    }
+    .editors-posts .post1 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .sidebar-left, .sidebar-right {
+        position: sticky;
+        top: 70px;
+        bottom: 0;
+        align-self: flex-start;
+    }
+}
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .carousel {
+        grid-template-columns: 2fr repeat(3, 1fr);
+        grid-template-areas: 
+            "carousel-item1 carousel-item2 carousel-item3 carousel-item4"
+            "carousel-item1 carousel-item5 carousel-item6 carousel-item7";
+    }
+    .carousel-item4, .carousel-item7 {
+        display: block;
+    }
+    .side-posts .post {
+        flex-direction: row;
+        align-items: center;
+    }
+    .fashion-trend .main-post-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .main-post .post-title {
+        padding-top: 0;
+    }
+    .playlist-videos {
+        height: 244px;
+    }
+}
